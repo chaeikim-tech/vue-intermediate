@@ -1,28 +1,46 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <TodoHeader/>
+    <TodoInput/>
+    <TodoList/>
+    <TodoFooter/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TodoHeader from './components/TodoHeader'
+import TodoInput from './components/TodoInput'
+import TodoList from './components/TodoList'
+import TodoFooter from './components/TodoFooter'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    //컴포넌트 태그명 : 컴포넌트 내용
+    TodoHeader,
+    TodoInput,
+    TodoList,
+    TodoFooter
+    //단어 앞자리가 대문자 = 파스칼 케이스(컴포넌트) / 케밥기법(템플릿)
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  body{
+    text-align: center;
+    background-color: #f6f6f6 ;
+  }
+  input{
+    border-style: groove ;
+    width: 200px;
+  }
+  button{
+    border-style: groove;
+  }
+  .shadow {
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.03);
+  }
+
 </style>
